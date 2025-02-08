@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Solutions</title>
+    <title>Payment</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <header>
@@ -21,21 +22,15 @@
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Welcome to Cybersecurity Solutions</h1>
-            <p>Your one-stop solution for all cybersecurity needs.</p>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="service">
-                <h3>Mobile Phone Retrieval</h3>
-                <p>We help you locate your lost mobile phone with advanced tracking technologies.</p>
-            </div>
-            <div class="service">
-                <h3>Kidnapping Person Location</h3>
-                <p>Our team specializes in locating missing persons with cutting-edge cybersecurity tools.</p>
-            </div>
+        <section id="payment">
+            <h2>Payment</h2>
+            <form id="payment-form">
+                <div id="card-element">
+                    <!-- Stripe Card Element will be inserted here -->
+                </div>
+                <button id="submit-payment">Pay Now</button>
+                <div id="card-errors" role="alert"></div>
+            </form>
         </section>
     </main>
 
