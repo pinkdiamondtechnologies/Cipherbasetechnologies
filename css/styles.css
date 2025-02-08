@@ -1,20 +1,22 @@
-/* styles.css */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
 }
 
+/* Navigation Bar */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+  background: #222;
+  padding: 15px 0;
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
 nav ul li {
@@ -25,18 +27,99 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
-main {
-  padding: 20px;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
+/* Hero Section */
+#hero {
+  background: url("../images/hero-bg.jpg") no-repeat center center/cover;
+  color: white;
   text-align: center;
-  padding: 10px 0;
-  position: relative;
-  inset-block-end: 0;
-  inline-size: 100%;
+  padding: 100px 20px;
+}
+
+#hero h1 {
+  font-size: 2.5em;
+  margin-block-end: 10px;
+}
+
+#hero p {
+  font-size: 1.2em;
+  margin-block-end: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+/* Services Section */
+#services {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+#services h2 {
+  font-size: 2em;
+  margin-block-end: 20px;
+}
+
+.service {
+  display: inline-block;
+  inline-size: 45%;
+  background: #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.service h3 {
+  font-size: 1.5em;
+  margin-block-end: 10px;
+}
+
+.service-button {
+  display: inline-block;
+  margin-block-start: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.service-button:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.social-links a {
+  color: #007bff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
