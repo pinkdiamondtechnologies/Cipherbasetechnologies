@@ -155,3 +155,55 @@ footer {
 .social-links a:hover {
   text-decoration: underline;
 }
+
+<style>
+.services {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.service-category {
+    margin-bottom: 2rem;
+}
+
+.service-category h3 {
+    color: #0066ff;
+    margin-bottom: 1rem;
+}
+
+.service-category ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.service-category ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.service-category ul li:before {
+    content: "•";
+    color: #0066ff;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.training-course {
+    margin-left: 1rem;
+}
+
+.training-course h4 {
+    color: #444;
+    margin: 1rem 0;
+}
+
+.training-course ul ul {
+    margin-top: 0.5rem;
+}
+</style>

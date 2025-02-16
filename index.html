@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cipherbase Technologies</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Snipcart CSS -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 <body>
+    <script>
+        window.SnipcartSettings = {
+          publicApiKey: "NTFmNGI5MGEtMzE4ZS00MDg4LWIyOTYtNTk3YWYwYWEwNGVmNjM4NzQ2NDAzNzc5MTc2NTcz",
+          loadStrategy: "on-user-interaction",
+          timeoutDuration: 5000, // Cart will load 5 seconds after user interaction
+          addProductBehavior: "none",
+          modalStyle: "side",
+        };
+      
+        (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+      </script>
     <header>
         <nav>
             <ul>
@@ -25,9 +38,53 @@
     </header>
 
     <main>
+        <section class="services">
+            <h2>Core Services</h2>
+            
+            <div class="service-category">
+                <h3>Security Solutions</h3>
+                <ul>
+                    <li>Advanced threat detection and prevention systems</li>
+                    <li>Network security infrastructure development</li>
+                    <li>Vulnerability assessment and penetration testing</li>
+                    <li>24/7 security monitoring and incident response</li>
+                    <li>Custom security architecture design</li>
+                </ul>
+            </div>
+        
+            <div class="service-category">
+                <h3>Tracking & Recovery Services</h3>
+                <ul>
+                    <li>Asset tracking and recovery solutions</li>
+                    <li>Digital forensics and investigation</li>
+                    <li>GPS tracking implementation</li>
+                    <li>Real-time monitoring systems</li>
+                    <li>Emergency response coordination</li>
+                </ul>
+            </div>
+        
+            <div class="service-category">
+                <h3>Cybersecurity Training Programs</h3>
+                <div class="training-course">
+                    <h4>Foundation Course</h4>
+                    <ul>
+                        <li>Duration: 5 days</li>
+                        <li>Topics covered:
+                            <ul>
+                                <li>Fundamentals of cybersecurity</li>
+                                <li>Threat identification and assessment</li>
+                                <li>Basic network security</li>
+                                <li>Password management and data protection</li>
+                                <li>Social engineering awareness</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section id="hero">
             <h1>Welcome to Cipherbase Technologies</h1>
-            <p>Your one-stop solution for all cybersecurity needs.</p>
+            <p>CipherBase Technologies is a premier cybersecurity and digital intelligence firm specializing in comprehensive security solutions, advanced tracking systems, and professional security consulting. Our mission is to provide cutting-edge security solutions that protect our clients' assets while maintaining the highest standards of professional integrity and technical excellence.</p>
             <a href="html/courses.html" class="cta-button">Explore Courses</a>
         </section>
 
@@ -44,17 +101,58 @@
                 <a href="html/services.html#kidnapping-location" class="service-button">Learn More</a>
             </div>
         </section>
+        
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <h3>Office 365 Subscription</h3>
+                <p>Get a licensed Office 365 subscription with cloud services and premium apps.</p>
+                <img src="assets/images/office365.jpg" alt="Office 365">
+                
+                <button class="snipcart-add-item"
+                    data-item-id="office-365"
+                    data-item-price="99.99"
+                    data-item-url="/products/office-365"
+                    data-item-description="A complete Microsoft Office 365 subscription for your business needs."
+                    data-item-image="/assets/images/office365.jpg"
+                    data-item-name="Office 365 Subscription"
+                    data-item-custom1-name="Subscription Type"
+                    data-item-custom1-options="Personal|Business|Enterprise">
+                    Add to cart
+                </button>
+            </div>
+        </section>
+        
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <h3>CHE pdf</h3>
+                <p>Comprehensive CHE study guide in PDF format.</p>
+                <button class="snipcart-add-item"
+                    data-item-id="che-pdf"
+                    data-item-name="CHE pdf"
+                    data-item-price="19.99"
+                    data-item
+::contentReference[oaicite:0]{index=0}
+ 
     </main>
 
     <footer>
         <p>&copy; 2023 Cipherbase Technologies. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://www.facebook.com/cipherbase.integrated.technologies" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/cipherbase.integrated.technologies" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="www.tiktok.com/@Cipherbase_technologies" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://https://t.me/+0C5v-fHgcs01MmQ0" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://www.instagram.com/cipherbasetech?utm_source=qr&igsh=MXF1NnQzMm1ydjVkZA==" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://www.youtube.com/channel/UCSQeZrOe64rdQUwjGjg3_RA" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
     </footer>
-
+    <!-- Your content -->
     <script src="js/scripts.js"></script>
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="NTFmNGI5MGEtMzE4ZS00MDg4LWIyOTYtNTk3YWYwYWEwNGVmNjM4NzQ2NDAzNzc5MTc2NTcz"></div>
+    <script src="js/checkout.js"></script>
 </body>
 </html>

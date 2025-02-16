@@ -1,0 +1,23 @@
+A detailed system architecture flowchart for a global device tracking software. The flowchart should include:
+
+1. **User Input Layer**: Users enter MAC address, IMEI, or other unique device identifiers.
+2. **Data Collection Layer**:
+   - Public databases (Shodan, WiGLE, IMEI registries, OSINT sources)
+   - ISP & IP logs (MaxMind, IPinfo API)
+   - Passive network monitoring (Wi-Fi, cell towers, SDR tracking)
+   - Active scanning (probe public Wi-Fi, DNS logs)
+3. **Data Processing Layer**:
+   - AI-Powered Device Behavior Analysis
+   - Correlation engine (matches device activity across sources)
+   - Privacy-compliant anonymization
+4. **Analysis & Monitoring Layer**:
+   - Automated tracking watchlist (continuously scans for device activity)
+   - Dark web & stolen device marketplace monitoring
+   - Honeypot traps (fake tracking apps to collect thief data)
+   - AI-based anomaly detection
+5. **Alert & Notification Layer**:
+   - Real-time alerts (email, SMS, app notifications) when the device is online
+   - Geolocation tracking (Google Maps API)
+   - Reporting dashboard for law enforcement or user tracking history
+
+The flowchart should use arrows to show data flow between components, using a high-tech cyber intelligence theme with a futuristic design.
