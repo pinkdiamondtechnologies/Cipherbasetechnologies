@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Location Tracker & Core Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        }
+        h1, h2 {
+            color: #00ffcc;
+        }
+        button {
+            background-color: #00ffcc;
+            color: #0a0a0a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #008f99;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #333;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cipherbase Technologies</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#core-tool">Core Tool</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#qa">Q&A</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="home">
+        <h2>Find a Phone's Location Instantly</h2>
+        <input type="text" id="phone-number" placeholder="Enter phone number" required>
+        <button onclick="trackPhone()">Track Now</button>
+        <p id="result"></p>
+    </div>
+    
+    <div class="container" id="core-tool">
+        <h2>Core Tool</h2>
+        <h3>Dark Web Monitoring</h3>
+        <input type="text" id="emailInput" placeholder="Enter your email">
+        <button onclick="checkDarkWeb()">Check</button>
+        <p id="darkWebResult"></p>
+
+        <h3>Phishing URL Checker</h3>
+        <input type="text" id="urlInput" placeholder="Enter website URL">
+        <button onclick="checkPhishing()">Check</button>
+        <p id="phishingResult"></p>
+    </div>
+
+    <div class="container" id="support">
+        <h2>Support Ticket</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="issue" placeholder="Describe your issue"></textarea>
+        <button onclick="submitTicket()">Submit</button>
+        <p id="ticketResponse"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cipherbase Technologies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function trackPhone() {
+            const phone = document.getElementById("phone-number").value;
+            document.getElementById("result").innerText = `Tracking phone number: ${phone}`;
+        }
+
+        async function checkDarkWeb() {
+            const email = document.getElementById("emailInput").value;
+            document.getElementById("darkWebResult").innerText = `Checking dark web for: ${email}`;
+        }
+
+        async function checkPhishing() {
+            const url = document.getElementById("urlInput").value;
+            document.getElementById("phishingResult").innerText = `Checking URL: ${url}`;
+        }
+
+        async function submitTicket() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const issue = document.getElementById("issue").value;
+            document.getElementById("ticketResponse").innerText = `Ticket submitted by ${name}`;
+        }
+    </script>
+</body>
+</html>
