@@ -1,0 +1,13 @@
+documentation/
+command to change the script folder on GitHub
+
+cd "C:\Users\PinkDamond Tech\Documents\Mywebsite2"
+mv Public/index.html .
+mv Public/script.js .
+mv Public/core-tool.html .
+
+Commit and Push to GitHub
+
+git add .
+git commit -m "Moved index.html and script.js to root for GitHub Pages"
+git push origin main
