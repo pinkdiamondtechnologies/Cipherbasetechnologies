@@ -1,0 +1,64 @@
+Permanent MAC Spoofing: Auto-Random MAC on Every Boot
+	1. Create a shell Script that Randomize MAC Address by using below command
+
+sudo nano /usr/local/bin/random-mac.sh
+
+Add the following script:
+
+
+#!/bin/bash
+
+# Network interface (change wlan0 or eth0 to your actual interface)
+INTERFACE="wlan0"
+
+# Generate a random MAC address (using /dev/random)
+MAC=$(printf '00:%02X:%02X:%02X:%02X:%02X\n' $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)))
+
+# Bring the interface down, change MAC, then bring it up
+ip link set dev $INTERFACE down
+ip link set dev $INTERFACE address $MAC
+ip link set dev $INTERFACE up
+
+echo "New MAC Address: $MAC"
+
+Save and exit (CTRL+X, then Y, then Enter).
+
+2. Create a Systemd know as System Daemon Service by using below command
+
+sudo nano /etc/systemd/system/random-mac.service
+
+[Unit]
+Description=Random MAC Address Generator
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/random-mac.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+	3. Add this under network manager by using below command
+
+sudo nano /etc/NetworkManager/NetworkManager.conf
+
+
+[device]
+wifi.scan-rand-mac-address=no
+
+[connection]
+ethernet.cloned-mac-address=random
+wifi.cloned-mac-address=random
+
+
+4. Enable the Service by using below command
+
+
+sudo systemctl daemon-reload
+sudo systemctl enable random-mac.service
+
+
+Save, exit, and restart NetworkManager:
+
+sudo systemctl restart NetworkManager
